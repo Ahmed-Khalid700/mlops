@@ -1,0 +1,184 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 503B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 181B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/python:latest
+#4 DONE 0.5s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 1.19kB done
+#6 DONE 0.0s
+
+#7 [1/4] FROM docker.io/library/python:latest@sha256:e06cc1111ed84189e91866447f562b89faadbfbbb9937cd67e6bf4172cdb45df
+#7 resolve docker.io/library/python:latest@sha256:e06cc1111ed84189e91866447f562b89faadbfbbb9937cd67e6bf4172cdb45df 0.0s done
+#7 CACHED
+
+#8 [2/4] ADD . /app
+#8 DONE 0.0s
+
+#9 [3/4] WORKDIR /app
+#9 DONE 0.0s
+
+#10 [4/4] RUN pip install -r requirement.txt
+#10 2.143 Collecting fastapi (from -r requirement.txt (line 1))
+#10 2.169   Downloading fastapi-0.141.1-py3-none-any.whl.metadata (27 kB)
+#10 2.207 Collecting uvicorn (from -r requirement.txt (line 2))
+#10 2.211   Downloading uvicorn-0.52.4-py3-none-any.whl.metadata (6.6 kB)
+#10 2.245 Collecting redis (from -r requirement.txt (line 3))
+#10 2.249   Downloading redis-8.1.0-py3-none-any.whl.metadata (16 kB)
+#10 2.277 Collecting starlette>=0.46.0 (from fastapi->-r requirement.txt (line 1))
+#10 2.281   Downloading starlette-1.6.0-py3-none-any.whl.metadata (6.4 kB)
+#10 2.381 Collecting pydantic>=2.9.0 (from fastapi->-r requirement.txt (line 1))
+#10 2.385   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+#10 2.417 Collecting typing-extensions>=4.8.0 (from fastapi->-r requirement.txt (line 1))
+#10 2.420   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#10 2.436 Collecting typing-inspection>=0.4.2 (from fastapi->-r requirement.txt (line 1))
+#10 2.440   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#10 2.454 Collecting annotated-doc>=0.0.2 (from fastapi->-r requirement.txt (line 1))
+#10 2.458   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#10 2.481 Collecting click>=7.0 (from uvicorn->-r requirement.txt (line 2))
+#10 2.485   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#10 2.501 Collecting h11>=0.8 (from uvicorn->-r requirement.txt (line 2))
+#10 2.505   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#10 2.538 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->-r requirement.txt (line 1))
+#10 2.542   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#10 3.153 Collecting pydantic-core==2.46.5 (from pydantic>=2.9.0->fastapi->-r requirement.txt (line 1))
+#10 3.159   Downloading pydantic_core-2.46.5-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#10 3.187 Collecting anyio<5,>=3.6.2 (from starlette>=0.46.0->fastapi->-r requirement.txt (line 1))
+#10 3.192   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#10 3.209 Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette>=0.46.0->fastapi->-r requirement.txt (line 1))
+#10 3.213   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+#10 3.225 Downloading fastapi-0.141.1-py3-none-any.whl (131 kB)
+#10 3.236 Downloading uvicorn-0.52.4-py3-none-any.whl (79 kB)
+#10 3.245 Downloading redis-8.1.0-py3-none-any.whl (560 kB)
+#10 3.268    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 560.6/560.6 kB 17.0 MB/s  0:00:00
+#10 3.274 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#10 3.286 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#10 3.299 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#10 3.310 Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+#10 3.335 Downloading pydantic_core-2.46.5-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#10 3.379    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 44.7 MB/s  0:00:00
+#10 3.383 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#10 3.389 Downloading starlette-1.6.0-py3-none-any.whl (75 kB)
+#10 3.399 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#10 3.409 Downloading idna-3.19-py3-none-any.whl (68 kB)
+#10 3.417 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#10 3.425 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#10 3.618 Installing collected packages: typing-extensions, redis, idna, h11, click, annotated-types, annotated-doc, uvicorn, typing-inspection, pydantic-core, anyio, starlette, pydantic, fastapi
+#10 5.153 
+#10 5.156 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click-8.5.0 fastapi-0.141.1 h11-0.16.0 idna-3.19 pydantic-2.13.5 pydantic-core-2.46.5 redis-8.1.0 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.52.4
+#10 5.156 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#10 DONE 5.8s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.9s done
+#11 exporting manifest sha256:c5ddae86edf615e1cff9a1580afe94000621e0f17c92ea7e8886ed83b18ca274 0.0s done
+#11 exporting config sha256:143d2e4f32373755b6b18fdb51a3163e12aaef67299a220ded066c9bce487454 done
+#11 exporting attestation manifest sha256:7f11e059b2d9936248c9df4a24ac3d7c8deaa1cb98ade495c6196683bb3283a3 0.0s done
+#11 exporting manifest list sha256:f2840cb97d5c8e5cfb9869e4282a76252bf7ae703259611a880bd103408d5188 0.0s done
+#11 naming to docker.io/library/test-count-app:latest done
+#11 unpacking to docker.io/library/test-count-app:latest
+#11 unpacking to docker.io/library/test-count-app:latest 0.4s done
+#11 DONE 2.4s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+Attaching to count-app-1, redis-1
+redis-1  | Starting Redis Server
+redis-1  | 1:C 11 Sep 2026 14:23:44.975 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 11 Sep 2026 14:23:44.975 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 11 Sep 2026 14:23:44.975 * Redis version=8.10.1, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 11 Sep 2026 14:23:44.975 * Configuration loaded
+redis-1  | 1:M 11 Sep 2026 14:23:44.975 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+redis-1  | 1:M 11 Sep 2026 14:23:44.975 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 11 Sep 2026 14:23:44.976 * Running mode=standalone, port=6379.
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> RedisBloom version 8.10.1 (Git=unknown)
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> Registering configuration options: [
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ bf-initial-size     :       100 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.977 * <bf> ]
+redis-1  | 1:M 11 Sep 2026 14:23:44.978 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 11 Sep 2026 14:23:44.991 * <search> search-workers default: 2 (min of MAX_WORKER_THREADS=16 and CPU cores)
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Redis version found by RedisSearch : 8.10.1 - oss
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> RediSearch version 8.10.0 (Git=)
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD, 
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Initialized thread pools!
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Enabled workers threadpool of size 2
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Subscribe to config changes
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Subscribe to cluster slot migration events
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Subscribe to cluster topology change events
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Enabled role change notification
+redis-1  | 1:M 11 Sep 2026 14:23:44.992 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 11 Sep 2026 14:23:44.993 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> RedisTimeSeries version 81000, git_sha=
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> Redis version found by RedisTimeSeries : 8.10.1 - oss
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-libmr-protocol      :     INTERNAL }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> 	{ ts-topology-events     :         true }
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> ]
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> Detected redis oss (cluster-enabled=no)
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> Subscribe to ASM events
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> Subscribe to topology changes events
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * <timeseries> Enabled diskless replication
+redis-1  | 1:M 11 Sep 2026 14:23:44.995 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> version: 81000 git sha: unknown branch: unknown
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V6 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V7 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Exported RedisJSON_V8 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <ReJSON> Initialized shared string cache, thread safe: true.
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * <search> Acquired RedisJSON_V8 API
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * Server initialized
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 * Ready to accept connections tcp
+redis-1  | 1:M 11 Sep 2026 14:23:44.996 # WARNING: Redis does not require authentication and is not protected by network restrictions. Redis will accept connections from any IP address on any network interface.
+count-app-1  | INFO:     172.19.0.1:33724 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:33734 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+count-app-1  | INFO:     172.19.0.1:34404 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:34412 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:34422 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:34424 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:34426 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:58292 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:34424 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:58294 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:58306 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:58314 - "GET / HTTP/1.1" 200 OK
+count-app-1  | INFO:     172.19.0.1:51632 - "GET / HTTP/1.1" 200 OK
+Gracefully Stopping... press Ctrl+C again to force
+[K Container test-count-app-1  [32mStopping[0m
+[K Container test-count-app-1  [32mStopped[0m
+[K Container test-redis-1  [32mStopping[0m
+[K Container test-redis-1  [32mStopped[0m

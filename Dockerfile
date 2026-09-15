@@ -1,14 +1,25 @@
-FROM python:3.11-slim
+# FROM python:3.11-slim
 
-WORKDIR /app
+# WORKDIR /app
 
-RUN pip install --no-cache-dir uv
+# ENV PYTHONPATH=/app
 
-COPY . .
+# RUN pip install --no-cache-dir uv
 
-RUN uv pip install --system .
+# COPY . .
+
+# RUN uv pip install --system .
 
 
-EXPOSE 8000
+# EXPOSE 8000
 
-CMD ["python", "src/app/main.py"]
+# CMD ["python", "src/app/main.py"]
+
+
+FROM alpine
+
+LABEL des="RUN VS CMD"
+
+RUN echo "Build Time"
+
+CMD ["echo",  "Run Time"]

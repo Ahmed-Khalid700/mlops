@@ -1,6 +1,6 @@
 name: test
 
-on: pull_request
+on: project_column
 
 jobs:
     lint:

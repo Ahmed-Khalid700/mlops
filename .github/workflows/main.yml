@@ -1,6 +1,6 @@
 name: test
 
-on: project_column
+on: push
 
 jobs:
     lint:

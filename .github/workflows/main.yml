@@ -17,5 +17,5 @@ jobs:
       needs: [lint, test]
       runs-on: ubuntu-slim
       steps:
-        - run: echo"Building..."
+        - run: echo "Building..."
     
